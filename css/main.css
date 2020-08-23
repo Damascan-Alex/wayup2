@@ -39,7 +39,11 @@ p {
 
 a {
 	text-decoration: none;
+	color: white;
 	transition: all 0.5s ease;
+}
+a:hover {
+	color: #ff7d34;
 }
 
 .container {
@@ -68,34 +72,28 @@ h2 {
 	font-size: 16px;
 	letter-spacing: 0.055em;
 	display: block;
-	width: 150px;
-	/* padding-left: 30px; */
-	/* background: url('../css/logoChepoTrip.svg') no-repeat left center; */
+	padding-left: 30px;
+	background: url('../css/logo-pig-white.svg') no-repeat left center;
 	margin-right: 70px;
 }
 
 .menu {
 	display: flex;
 	font-size: 15px;
-
-	margin-right: 21px;
+	margin-right: 74px;
 }
 
-.menu li {
+.menu li:not(:last-child) {
 	margin-right: 48px;
 }
 
-.menu a {
-	padding-bottom: 5px;
-	color: #fff;
-}
-
-.nextPage a {
-	color: white;
+.nextPage {
 	font-size: 14px;
 }
+
 .nextPage span {
 	font-weight: bold;
+	display: block;
 }
 
 .call {
@@ -106,7 +104,6 @@ h2 {
 }
 
 .phone {
-	color: white;
 	font-size: 15px;
 }
 
@@ -161,10 +158,14 @@ h2 {
 	font-size: 17px;
 	color: white;
 }
+.offer button :hover {
+	color: white;
+}
 
 .arow {
 	margin-top: 184px;
 }
+
 /* Destination section */
 .destinations {
 	background-color: white;
@@ -204,8 +205,7 @@ h2 {
 	font-size: 13px;
 }
 .trip .meta p {
-	display: inline-block;
-
+	display: inline;
 	color: white;
 	padding: 3px 13px;
 	border-radius: 30px;
@@ -214,7 +214,7 @@ h2 {
 .trip .meta span {
 	font-weight: bold;
 	color: #ee3c5c;
-	margin-left: 20px;
+	float: right;
 }
 .trip h3 {
 	margin-top: 19px;
@@ -233,11 +233,16 @@ h2 {
 	font-size: 17px;
 	padding: 15px 29px;
 	text-align: center;
-	color: #ee3c5c;
 	font-weight: bold;
 	background-color: transparent;
 }
+.destinations button a {
+	color: #ee3c5c;
+}
 
+.destinations button a:hover {
+	color: black;
+}
 .aboutUsContent {
 	display: flex;
 	justify-content: space-between;
@@ -272,7 +277,7 @@ h2 {
 /* Contacts Section */
 
 .contacts {
-	margin-top: 96px;
+	padding: 57px 0;
 }
 
 .contactsContent {
@@ -282,7 +287,7 @@ h2 {
 }
 
 .form {
-	padding: 58px 64px;
+	padding: 58px 64px 97px 64px;
 	box-shadow: 0px 17px 50px rgba(32, 40, 69, 0.14);
 	border-radius: 20px;
 	width: 600px;
@@ -303,17 +308,6 @@ h2 {
 	box-sizing: border-box;
 	border-radius: 5px;
 }
-.contactNumber {
-	color: rebeccapurple;
-	width: 600px;
-	text-align: center;
-}
-.contactNumber p {
-	font-weight: bold;
-	font-size: 20px;
-	margin-top: 23px;
-	color: rgba(114, 52, 26, 0.89);
-}
 
 .form button {
 	background-color: #ff7d34;
@@ -325,12 +319,29 @@ h2 {
 	font-weight: bold;
 	font-size: 17px;
 	color: white;
-	margin-bottom: 40px;
 }
-/* Footer */
+.form button a:hover {
+	color: white;
+}
 
+.contactNumber {
+	width: 600px;
+	text-align: center;
+}
+.contactNumber a {
+	display: block;
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 23px;
+	color: rgba(114, 52, 26, 0.89);
+}
+
+/* Footer */
+.footer {
+	padding: 116px auto 119px;
+}
 .footer p {
-	margin: 116px auto 119px;
+	margin: 50px auto;
 	text-align: center;
 	color: rgba(114, 52, 26, 0.6);
 	font-size: 14px;
