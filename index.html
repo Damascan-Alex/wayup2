@@ -17,21 +17,42 @@
 				<div class="nav">
 					<a href="#" class="logo">CHEPO TRIP</a>
 					<ul class="menu">
-						<li><a href="#">Главная</a></li>
-						<li><a href="#">Куда поедем</a></li>
-						<li><a href="#">О нас</a></li>
-						<li><a href="#">Контакты</a></li>
+						<li><a href="#" id='menu-main'>Главная</a></li>
+						<li><a href="#" id='menu-destination'>Куда поедем</a></li>
+						<li><a href="#" id='menu-aboutUs'>О нас</a></li>
+						<li><a href="#" id='menu-contacts'>Контакты</a></li>
 					</ul>
 					<a class="nextPage" href="#"><span>Индия</span>Следующая страна</a>
 					</ul>
 					<div class="call">
-						<a href="#" class="call-btn">Заказать звонок</a>
+						<a
+						class="call-btn" 
+						popup-open="popup-call" href="javascript:void(0)"
+						>Заказать звонок</a>
 						<a href="#" class="phone"> +7 (495) 545-12-63</a>
 					</div>
-					<a href="#" class="menu-btn">
+					<a href="#" class="menu-btn" >
 						<img src="./css/mobile-menu.svg" alt="Menu">
 					</a>
 				</div>
+				<!-- Popup-PopUp - Order Call back -->
+				<div class="popup" popup-name="popup-call">
+					<div class="popup-content">
+						<form action="#" class="form">
+							<h3>
+								Заполните форму, чтобы Заказать звонок
+							</h3>
+							<input type="text" placeholder="Имя" required>
+							<input type="email" placeholder="E-mail" required>
+							<input type="tel" placeholder="Телефон" required>
+							<button type="submit">
+								<a href="#">Заказать звонок</a>
+							</button>
+						</form>
+				<a class="close-button" popup-close="popup-call" href="javascript:void(0)">x</a>
+					</div>
+				</div>
+				<!-- pop up end -->
 				<div class="offer">
 					<h1>Фотопутешествие мечты</h1>
 					<p>
@@ -39,12 +60,12 @@
 						впечатления, люди и фотография. Все, что ты так любишь! Мы уже ждем
 						тебя.
 					</p>
-					<button><a href="#">Мне нужно это</a></button>
-					<a href="#"><img class='arow' src="./css/arow.svg" alt=""></a>
+					<button><a href="#contacts" id='contact-btn'>Мне нужно это</a></button>
+					<a href="#destinations"><img class='arow' id='arow-btn' src="./css/arow.svg" alt=""></a>
 				</div>
 			</div>
 		</header>
-		<section class="destinations">
+		<section class="destinations" id='destinations'>
 			<div class="container">
 				<h2>Куда поедем</h2>
 				<div class="trip-list">
@@ -108,11 +129,43 @@
 							</p>
 						</div>
 					</div>
+						<div class="trip hiden-trips">
+							<img src="./css/Destinaitons/thailand (1).jpg" alt="" />
+							<div class="description">
+								<div class="meta">
+									<p>7 дней</p>
+									<p>13 человек</p>
+									<span>1 апреля</span>
+								</div>
+								<h3>Бангкок</h3>
+								<p>
+									Индия граничит с Пакистаном на западе, с Китаем, Непалом и
+									Бутаном.
+								</p>
+							</div>
+						</div>
+						<div class="trip hiden-trips">
+							<img src="./css/Destinaitons/thailand (2).jpg" alt="" />
+							<div class="description">
+								<div class="meta">
+									<p>7 дней</p>
+									<p>13 человек</p>
+									<span>4 апреля</span>
+								</div>
+								<h3>Чиангмай</h3>
+								<p>
+									Индия граничит с Пакистаном на западе, с Китаем, Непалом и
+									Бутаном.
+								</p>
+							</div>
+						</div>		
 				</div>
-				<button><a href="#">Смотреть еще страны</a></button>
+				
+				<button id='more-trips'><a href="#" >Смотреть еще страны</a></button>
+				<button id='less-trips'><a href="#" >Скрыть страны</a></button>
 			</div>
 		</section>
-		<section class="aboutUs">
+		<section class="aboutUs" id='aboutUs'>
 			<div class="container">
 				<h2>О нас</h2>
 				<div class="aboutUsContent">
@@ -137,7 +190,7 @@
 			</div>		
 		</section>
 		</div>
-		<section class="contacts">
+		<section class="contacts" id="contacts">
 			<div class="container">
 				<h2>Contact us</h2>
 				<div class="contactsContent">
@@ -165,4 +218,6 @@
 			</div>
 		</section>
 	</body>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src='./JS/main.js'></script>
 </html>
